@@ -57,6 +57,11 @@ def parser(item, url, selector, chat, context):
 def downloader(update, context):
     chat = update.effective_chat
     name = update.message.document.file_name
+    if not os.path.isdir('tmp/files/'):
+        os.makedirs('tmp/files/')
+    if not os.path.isdir('tmp/upload/'):
+        os.makedirs('tmp/upload/')
+    
     try:
         context.bot.get_file(update.message.document).download(f'tmp/files/{name}')
         data = pd.read_csv(f'tmp/files/{name}')
