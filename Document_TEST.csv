@@ -1,0 +1,3 @@
+NAME,URL,XPATH
+monomax,https://monomax.by/map,"//div[starts-with(@class, ""shop"")]/p/text()"
+ziko,https://www.ziko.pl/lokalizator/,"//div[starts-with(@class, ""mp-pharmacies-map-container"")]/table[starts-with(@class, ""mp-pharmacies-table"")]/tbody[starts-with(@class, ""mp-pharmacies-table-elements"")]/tr[contains(@class, ""mp-pharmacy-element"")]/td[contains(@class, ""address"")]/text()[1]"
